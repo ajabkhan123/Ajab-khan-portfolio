@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ajab Khan | Full Stack Developer, AI &amp; NLP</title>
+  <meta name="description" content="Portfolio of Ajab Khan from Loralai, Balochistan, a Computer Science graduate (University of Loralai, 2026) building full stack web apps, machine learning models and NLP chatbots.">
+  <meta name="theme-color" content="#1B2A4A">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%231B2A4A'/><text x='50' y='68' font-size='56' font-family='Arial' font-weight='700' text-anchor='middle' fill='%23E0A526'>AK</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    /* Mark JS as available and apply saved theme before paint to avoid a flash */
+    document.documentElement.classList.add("js");
+    try {
+      var t = localStorage.getItem("theme");
+      if (t) document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <div class="tie-bar" aria-hidden="true"></div>
+    <div class="wrap header-row">
+      <a class="brand" href="#home" aria-label="Ajab Khan, home">Ajab Khan</a>
+      <nav id="nav" class="nav" aria-label="Main">
+        <a href="#assistant">Ask my assistant</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#journey">Journey</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header-tools">
+        <button class="palette-btn" id="paletteBtn" type="button" aria-label="Open quick menu" aria-haspopup="dialog">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <span class="palette-label">Quick menu</span><kbd>Ctrl K</kbd>
+        </button>
+        <button class="icon-btn" id="themeBtn" type="button" aria-label="Switch to dark theme">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <canvas class="net" id="net" aria-hidden="true"></canvas>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="hero-kicker">Computer Science graduate, University of Loralai, 2026</p>
+          <h1>Ajab Khan builds web apps and chatbots that understand people.</h1>
+          <p class="roles">I work on <span id="typed">full stack web apps</span><span class="caret" aria-hidden="true"></span></p>
+          <p class="lead">I'm a full stack developer with a focus on machine learning and natural language processing. My final year project is an NLP-based digital assistant that recognises what a user wants and answers in real time.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#assistant">Ask my assistant</a>
+            <a class="btn btn-ghost" href="assets/Ajab-Khan-CV.pdf" download>Download CV</a>
+          </div>
+          <ul class="quick-links" aria-label="Profiles">
+            <li><a href="https://github.com/ajabkhan123" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://kaggle.com/ajabkhan21" target="_blank" rel="noopener">Kaggle</a></li>
+            <li><a href="mailto:ajabkhan0055@gmail.com">Email</a></li>
+          </ul>
+        </div>
+
+        <figure class="portrait">
+          <div class="plaid" aria-hidden="true"></div>
+          <img src="images/ajab.jpg" width="540" height="609" alt="Portrait of Ajab Khan wearing a brown checked blazer and a striped tie">
+          <figcaption><span>Loralai, Balochistan</span><span class="clock" id="clock" aria-label="Current local time in Loralai"></span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ASSISTANT -->
+    <section class="section assistant" id="assistant" aria-labelledby="assistant-title">
+      <div class="wrap assistant-grid">
+        <div class="assistant-intro">
+          <h2 id="assistant-title">Ask my assistant</h2>
+          <p>Instead of reading a whole page, ask a question. This small assistant matches your words to topics from my CV, the same intent-recognition idea I used in my final year project.</p>
+          <p class="note">It runs in your browser with simple keyword matching. It only knows what is on my CV.</p>
+        </div>
+
+        <div class="chat" role="region" aria-label="Assistant chat">
+          <div class="chat-head">
+            <span class="dot" aria-hidden="true"></span>
+            <span>Ajab's CV assistant</span>
+            <button class="clear" id="chatClear" type="button">Clear chat</button>
+          </div>
+          <div class="chat-log" id="chatLog" role="log" aria-live="polite"></div>
+          <div class="chips" id="chips" aria-label="Suggested questions"></div>
+          <div class="chat-form">
+            <label class="sr-only" for="chatInput">Type your question</label>
+            <input id="chatInput" type="text" autocomplete="off" placeholder="Try: What was your final year project?">
+            <button class="btn btn-primary" id="chatSend" type="button">Send</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="wrap two-col">
+        <div>
+          <h2 id="about-title">About me</h2>
+        </div>
+        <div class="prose">
+          <p>I'm a results-driven Computer Science graduate with hands-on experience in Python, machine learning, natural language processing, full stack web development and digital marketing.</p>
+          <p>I like building intelligent systems and real software that people use. Along the way I trained in freelancing and digital entrepreneurship, and I completed several Google and Coursera courses.</p>
+          <p>I'm based in Loralai, Balochistan, where I studied at the University of Loralai and completed my freelancing training at the DigiBizz Center.</p>
+          <p>I'm looking for a challenging role where technical depth and creativity can make a real impact.</p>
+          <dl class="facts">
+            <div><dt>Degree</dt><dd>BS Computer Science, 2022 to 2026</dd></div>
+            <div><dt>Location</dt><dd>Loralai, Balochistan</dd></div>
+            <div><dt>Languages</dt><dd>Pashto, Urdu, English</dd></div>
+            <div><dt>Focus</dt><dd>Full stack, ML, NLP</dd></div>
+          </dl>
+          <ul class="stats" aria-label="At a glance">
+            <li><strong data-count="8">8</strong><span>certificates</span></li>
+            <li><strong data-count="4">4</strong><span>projects</span></li>
+            <li><strong data-count="5">5</strong><span>programming languages</span></li>
+            <li><strong data-count="3">3</strong><span>spoken languages</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section alt" id="skills" aria-labelledby="skills-title">
+      <div class="wrap">
+        <h2 id="skills-title">Skills</h2>
+        <div class="searchbar">
+          <label class="sr-only" for="skillSearch">Search skills</label>
+          <input class="search" id="skillSearch" type="search" placeholder="Search skills, e.g. python, react, spaCy" autocomplete="off">
+          <p class="note" id="skillCount" role="status"></p>
+        </div>
+        <div class="skill-grid">
+          <article class="skill">
+            <h3>Programming languages</h3>
+            <ul class="tags"><li>Python</li><li>Java</li><li>C++</li><li>C</li><li>JavaScript (ES6+)</li></ul>
+          </article>
+          <article class="skill">
+            <h3>Full stack development</h3>
+            <ul class="tags"><li>HTML5</li><li>CSS3</li><li>Bootstrap</li><li>Tailwind CSS</li><li>React.js</li><li>Node.js</li><li>Express.js</li><li>REST APIs</li><li>Responsive design</li></ul>
+          </article>
+          <article class="skill">
+            <h3>Machine learning</h3>
+            <ul class="tags"><li>Classification</li><li>Regression</li><li>Feature engineering</li><li>Model evaluation</li><li>Neural networks</li><li>Computer vision basics</li></ul>
+          </article>
+          <article class="skill">
+            <h3>Natural language processing</h3>
+            <ul class="tags"><li>Tokenization</li><li>Intent recognition</li><li>Sentiment analysis</li><li>Conversational AI</li><li>Transformers</li><li>Prompt engineering</li></ul>
+          </article>
+          <article class="skill">
+            <h3>AI and data libraries</h3>
+            <ul class="tags"><li>NumPy</li><li>Pandas</li><li>Scikit-learn</li><li>TensorFlow</li><li>PyTorch</li><li>Keras</li><li>Matplotlib</li><li>SciPy</li><li>NLTK</li><li>spaCy</li><li>Hugging Face</li><li>LangChain</li><li>OpenAI API</li></ul>
+          </article>
+          <article class="skill">
+            <h3>Databases and cloud</h3>
+            <ul class="tags"><li>MySQL</li><li>MongoDB</li><li>SQLite</li><li>Firebase</li><li>AWS basics</li><li>Google Cloud basics</li></ul>
+          </article>
+          <article class="skill">
+            <h3>Tools</h3>
+            <ul class="tags"><li>Git and GitHub</li><li>VS Code</li><li>Postman</li><li>Docker basics</li><li>Jupyter</li><li>Google Colab</li><li>Ubuntu Linux</li><li>Raspberry Pi</li><li>Canva</li></ul>
+          </article>
+          <article class="skill">
+            <h3>Games and marketing</h3>
+            <ul class="tags"><li>PyGame</li><li>PyOpenGL</li><li>SEO</li><li>Social media marketing</li><li>Content creation</li><li>Fiverr</li><li>Upwork</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="wrap">
+        <h2 id="projects-title">Projects</h2>
+        <div class="filters" role="group" aria-label="Filter projects">
+          <button class="filter" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter" type="button" data-filter="ai" aria-pressed="false">AI and NLP</button>
+          <button class="filter" type="button" data-filter="web" aria-pressed="false">Web</button>
+          <button class="filter" type="button" data-filter="games" aria-pressed="false">Games</button>
+          <button class="filter" type="button" data-filter="marketing" aria-pressed="false">Marketing</button>
+        </div>
+
+        <article class="project featured" data-cat="ai web">
+          <div class="project-meta">
+            <p class="when">Final year project, 2025 to 2026</p>
+            <h3>NLP-based online digital assistant chatbot</h3>
+          </div>
+          <div class="project-body">
+            <p>A conversational AI assistant that understands what a user is asking and replies with accurate, context-aware answers.</p>
+            <ul class="bullets">
+              <li>Text preprocessing, tokenization and intent classification with NLTK, spaCy and Hugging Face Transformers.</li>
+              <li>Web interface for real-time chat, with a Flask backend handling requests and responses.</li>
+              <li>Model tested and refined over many rounds to improve accuracy and conversation flow.</li>
+            </ul>
+            <ul class="tags small"><li>Python</li><li>NLTK</li><li>spaCy</li><li>Transformers</li><li>Flask</li></ul>
+          </div>
+        </article>
+
+        <div class="project-row">
+          <article class="project" data-cat="ai">
+            <p class="when">Personal project, 2024 to 2025</p>
+            <h3>Machine learning models</h3>
+            <p>Supervised classification and regression models, with charts that show data patterns and model performance. Also explored deep learning basics with TensorFlow.</p>
+            <ul class="tags small"><li>Scikit-learn</li><li>Pandas</li><li>NumPy</li><li>Matplotlib</li></ul>
+          </article>
+          <article class="project" data-cat="games">
+            <p class="when">University project, 2023 to 2024</p>
+            <h3>2D and 3D games</h3>
+            <p>Interactive 2D games and 3D OpenGL scenes with real-time rendering, collision detection and user input handling.</p>
+            <ul class="tags small"><li>PyGame</li><li>PyOpenGL</li></ul>
+          </article>
+          <article class="project" data-cat="marketing">
+            <p class="when">Freelancing, 2024</p>
+            <h3>Digital marketing portfolio</h3>
+            <p>Marketing campaigns for real clients on Fiverr and Upwork, with social content designed in Canva and SEO to improve online visibility.</p>
+            <ul class="tags small"><li>SEO</li><li>Canva</li><li>Fiverr</li><li>Upwork</li></ul>
+          </article>
+        </div>
+        <p class="more">More code on <a href="https://github.com/ajabkhan123" target="_blank" rel="noopener">GitHub</a> and notebooks on <a href="https://kaggle.com/ajabkhan21" target="_blank" rel="noopener">Kaggle</a>.</p>
+      </div>
+    </section>
+
+    <!-- JOURNEY -->
+    <section class="section alt" id="journey" aria-labelledby="journey-title">
+      <div class="wrap">
+        <h2 id="journey-title">Education and training</h2>
+        <ol class="timeline">
+          <li>
+            <p class="when">2025 to 2026</p>
+            <h3>Final year project: NLP chatbot</h3>
+            <p>Designed and built a conversational assistant for intent recognition and automated replies.</p>
+          </li>
+          <li>
+            <p class="when">2 May 2025</p>
+            <h3>Digital marketing, 40-hour training</h3>
+            <p>Riphah International University and IP-SEC (under PSEB). Performance marketing, PPC campaigns, Google Analytics and social media ads.</p>
+          </li>
+          <li>
+            <p class="when">14 May to 15 Aug 2024</p>
+            <h3>Digital marketing trainee, freelancing program</h3>
+            <p>DigiBizz Center, University of Loralai (S&amp;IT Department, Government of Balochistan). Hands-on training on Fiverr, Upwork, Guru and Amazon, covering content marketing, SEO, branding and online ads. Certified as a Successful and Active Freelancer.</p>
+          </li>
+          <li>
+            <p class="when">July 2022 to 2026</p>
+            <h3>BS Computer Science, University of Loralai</h3>
+            <p>Data Structures and Algorithms, OOP, Artificial Intelligence, Machine Learning, NLP, Software Engineering, Computer Networks, Web Development and Operating Systems.</p>
+          </li>
+          <li>
+            <p class="when">May 2020 to May 2022</p>
+            <h3>FSc Pre-Engineering, Government Degree College Boys, Loralai</h3>
+            <p>839 out of 1100 marks.</p>
+          </li>
+          <li>
+            <p class="when">July 2018 to March 2020</p>
+            <h3>Matriculation, Science, Guideline Public High School, Loralai</h3>
+            <p>775 out of 1100 marks.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section class="section" id="certificates" aria-labelledby="cert-title">
+      <div class="wrap two-col">
+        <div><h2 id="cert-title">Certificates</h2></div>
+        <ul class="cert-list">
+          <li><span>The Nuts and Bolts of Machine Learning</span><em>Google, Coursera</em><time>Nov 2024</time></li>
+          <li><span>Get Started with Python</span><em>Google, Coursera</em><time>Dec 2024</time></li>
+          <li><span>Python Basics</span><em>University of Michigan, Coursera</em><time>Jan 2025</time></li>
+          <li><span>Crash Course on Python</span><em>Google, Coursera</em><time>Feb 2025</time></li>
+          <li><span>Digital Marketing (40-hour)</span><em>Riphah International University, IP-SEC, PSEB</em><time>May 2025</time></li>
+          <li><span>Get Started with Canva</span><em>Coursera Project Network</em><time>Jun 2025</time></li>
+          <li><span>Freelancing in Digital Marketing</span><em>DigiBizz, Government of Balochistan S&amp;IT</em><time>Aug 2024</time></li>
+          <li><span>Cyber Security Fundamentals</span><em>MindLuster</em><time>May 2026</time></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap two-col">
+        <div>
+          <h2 id="contact-title">Let's talk</h2>
+          <p class="muted">Based in Loralai, Balochistan. I'm open to developer roles, internships and freelance projects. References are available from University of Loralai faculty and the DigiBizz program director.</p>
+          <ul class="contact-list">
+            <li><span>Location</span><a href="https://www.google.com/maps/search/?api=1&query=Loralai%2C+Balochistan%2C+Pakistan" target="_blank" rel="noopener">Loralai, Balochistan, Pakistan</a></li>
+            <li><span>Email</span><div class="copy-row"><a href="mailto:ajabkhan0055@gmail.com">ajabkhan0055@gmail.com</a><button class="mini" id="copyEmail" type="button">Copy</button></div></li>
+            <li><span>Phone</span><a href="tel:+923322781772">+92 332 2781772</a></li>
+            <li><span>GitHub</span><a href="https://github.com/ajabkhan123" target="_blank" rel="noopener">github.com/ajabkhan123</a></li>
+            <li><span>Kaggle</span><a href="https://kaggle.com/ajabkhan21" target="_blank" rel="noopener">kaggle.com/ajabkhan21</a></li>
+          </ul>
+        </div>
+
+        <form class="form" id="contactForm" novalidate>
+          <div class="field">
+            <label for="cName">Your name</label>
+            <input id="cName" name="name" type="text" autocomplete="name" required>
+            <p class="err" id="eName" role="alert"></p>
+          </div>
+          <div class="field">
+            <label for="cEmail">Your email</label>
+            <input id="cEmail" name="email" type="email" autocomplete="email" required>
+            <p class="err" id="eEmail" role="alert"></p>
+          </div>
+          <div class="field">
+            <label for="cMsg">Message</label>
+            <textarea id="cMsg" name="message" rows="5" required></textarea>
+            <p class="err" id="eMsg" role="alert"></p>
+          </div>
+          <button class="btn btn-primary" type="submit">Open in my email app</button>
+          <p class="note" id="formNote"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="tie-bar" aria-hidden="true"></div>
+    <div class="wrap footer-row">
+      <p>&copy; <span id="year">2026</span> Ajab Khan</p>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 14 6-6 6 6"/></svg>
+  </button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <dialog class="palette" id="palette" aria-label="Quick menu">
+    <label class="sr-only" for="paletteInput">Type to search sections and actions</label>
+    <input id="paletteInput" type="text" placeholder="Jump to a section or run an action" autocomplete="off" role="combobox" aria-expanded="true" aria-controls="paletteList">
+    <ul id="paletteList" role="listbox"></ul>
+    <p class="palette-hint">Use the arrow keys and Enter. Press Esc to close.</p>
+  </dialog>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
